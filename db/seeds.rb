@@ -6,15 +6,54 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Category.destroy_all
+Item.destroy_all
+OutfitItem.destroy_all
+Outfit.destroy_all
+User.destroy_all
+
+
 categories = Category.create([
   {name: 'Trousers'},
   {name: 'T-shirt'},
-  {name: 'shirt'},
+  {name: 'Shirt'},
   {name: 'Shoes'},
   {name: 'Trousers'}
   ])
 puts Category.all.length
 
-items = Item.create ([
-  {items: }
+
+users = User.create ([
+  {username: 'Casey'},
+  {username: 'Mike'},
+  {username: 'Jamie'},
   ])
+
+puts User.all.length
+
+outfits = Outfit.create ([
+  {occasion: 'Date', user_id: 1},
+  {occasion: 'Wedding', user_id: 1},
+  {occasion: 'Gym', user_id: 1},
+  {occasion: 'Work', user_id: 1}
+  ])
+
+puts Outfit.all.length
+
+items = Item.create ([
+  {image: 'scbnejkcbe', color: 'red', brand: 'LuLuLemon', user_id: 1, category_id: 1},
+  {image: 'scbnedwddwd', color: 'blue', brand: 'Burberry', user_id: 1, category_id: 2},
+  {image: 'scbnedwddwd', color: 'blue', brand: 'Burberry', user_id: 1, category_id: 3},
+  {image: 'cevfrvedwddwd', color: 'purple', brand: 'Cors', user_id: 1, category_id: 4}
+  ])
+
+puts Item.all.length
+
+outfit_items = OutfitItem.create ([
+  {outfit_id: 1, item_id: 1},
+  {outfit_id: 2, item_id: 1},
+  {outfit_id: 3, item_id: 2},
+  {outfit_id: 4, item_id: 3},
+  ])
+
+puts OutfitItem.all.length

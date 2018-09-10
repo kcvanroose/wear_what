@@ -25,17 +25,22 @@ ActiveRecord::Schema.define(version: 2018_09_10_141300) do
     t.string "image"
     t.string "color"
     t.string "brand"
+    t.integer "user_id"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "outfit_items", force: :cascade do |t|
+    t.integer "outfit_id"
+    t.integer "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "outfits", force: :cascade do |t|
     t.string "occasion"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
