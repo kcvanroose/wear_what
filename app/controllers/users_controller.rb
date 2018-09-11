@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
   def index
     @users = User.all
     render json: @users
@@ -16,11 +16,12 @@ class UserController < ApplicationController
     else
       render json: @user.errors
     end
+  end
 
   private
 
   def user_params
     params.require(:user).permit(:username)
   end
-  
+
 end
