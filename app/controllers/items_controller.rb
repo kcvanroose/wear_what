@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+
   def index
     @items = Item.all
     render json: @items
@@ -8,6 +9,11 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     render json: @item
   end
+
+  def new
+    @item = Item.new
+  end
+
 
   def create
     @item = Item.new(item_params)
@@ -21,6 +27,6 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:image, :color, :brand, :user_id, :category_id)
+    params.permit(:image, :color, :brand, :user_id, :category_id)
   end
 end

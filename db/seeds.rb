@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'carrierwave/orm/activerecord'
 
 Category.destroy_all
 Item.destroy_all
@@ -20,16 +21,32 @@ categories = Category.create([
   {name: 'Shoes'},
   {name: 'Trousers'}
   ])
-puts Category.all.length
+puts 'Categories: ', Category.all.length
 
 
 users = User.create ([
   {username: 'Casey'},
   {username: 'Mike'},
-  {username: 'Jamie'},
-  ])
+  {username: 'Jamie'}
+])
 
-puts User.all.length
+puts 'Users: ', User.all.length
+
+items = Item.create ([
+  {image: 'scbnejkcbe', color: 'red', brand: 'LuLuLemon', user_id: 1, category_id: 1},
+  {image: 'scbnedwddwd', color: 'blue', brand: 'Burberry', user_id: 1, category_id: 2},
+  {image: 'scbnedwddwd', color: 'blue', brand: 'Burberry', user_id: 1, category_id: 3},
+  {image: 'cevfrvedwddwd', color: 'purple', brand: 'Cors', user_id: 1, category_id: 4}
+])
+
+jacket = Item.new(color: 'black', brand: 'Canada Goose', user_id: 1, category_id: 3)
+f = File.open('app/views/Jacket.jpeg')
+jacket.image = f
+jacket.save
+
+puts 'Items: ', Item.all.length
+
+
 
 outfits = Outfit.create ([
   {occasion: 'Date', user_id: 1},
@@ -40,14 +57,7 @@ outfits = Outfit.create ([
 
 puts Outfit.all.length
 
-items = Item.create ([
-  {image: 'scbnejkcbe', color: 'red', brand: 'LuLuLemon', user_id: 1, category_id: 1},
-  {image: 'scbnedwddwd', color: 'blue', brand: 'Burberry', user_id: 1, category_id: 2},
-  {image: 'scbnedwddwd', color: 'blue', brand: 'Burberry', user_id: 1, category_id: 3},
-  {image: 'cevfrvedwddwd', color: 'purple', brand: 'Cors', user_id: 1, category_id: 4}
-  ])
 
-puts Item.all.length
 
 outfit_items = OutfitItem.create ([
   {outfit_id: 1, item_id: 1},
