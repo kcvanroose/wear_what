@@ -40,7 +40,7 @@ puts 'Users: ', User.all.length
 #   {image: 'cevfrvedwddwd', color: 'purple', brand: 'Cors', user_id: 1, category_id: 4}
 # ])
 
-jacket = Item.new(color: 'black', brand: 'Canada Goose', user_id: 1, category_id: 7)
+jacket = Item.new(color: 'Black', brand: 'Canada Goose', user_id: 1, category_id: 8)
 f = File.open('app/views/Jacket.jpeg')
 jacket.image = f
 jacket.save
@@ -85,7 +85,6 @@ f = File.open('app/views/tshirt4.jpeg')
 tshirtFour.image = f
 tshirtFour.save
 
-
 trousersOne = Item.new(color: 'Blue', brand: 'J Brand', user_id: 1, category_id: 1)
 f = File.open('app/views/trousers1.jpeg')
 trousersOne.image = f
@@ -121,7 +120,7 @@ f = File.open('app/views/shoes2.jpeg')
 shoesOne.image = f
 shoesTwo.save
 
-shoesThree = Item.new(color: 'Black', brand: 'Aldo'. user_id: 1, category_id: 4)
+shoesThree = Item.new(color: 'Black', brand: 'Aldo', user_id: 1, category_id: 4)
 f = File.open('app/views/shoes3.jpeg')
 shoesThree.image = f
 shoesThree.save
@@ -132,22 +131,19 @@ hatOne.image = f
 hatOne.save
 
 hatTwo = Item.new(color: 'Grey', brand: 'Paul Smith', user_id: 1, category_id: 6)
-f = File.Open('app/views/hat2.jpeg')
+f = File.open('app/views/hat2.jpeg')
 hatOne.image = f
 hatOne.save
 
-scarfOne = Item.new(color: 'Grey', brand: 'Tom Ford', user_id: 1, category_id: 6)
+scarfOne = Item.new(color: 'Grey', brand: 'Tom Ford', user_id: 1, category_id: 7)
 f = File.open('app/views/scarf1.jpeg')
 scarfOne.image = f
 scarfOne.save
 
-jacketTwo = Item.new(color: 'Grey', brand: 'Tom Ford', user_id: 1, category_id: 7)
+jacketTwo = Item.new(color: 'Grey', brand: 'Tom Ford', user_id: 1, category_id: 8)
 f = File.open('app/views/jacket2.jpeg')
 jacketTwo.image = f
 jacketTwo.save
-
-
-
 
 
 puts 'Items: ', Item.all.length
