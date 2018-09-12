@@ -77,7 +77,7 @@ footwearOne.image = fo
 footwearOne.save
 
 footwearTwo = Item.new(color: 'Black', brand: 'Aldo', user_id: 1, category_id: 4)
-ft = File.open('app/views/footwear-2(shoes).jpeg)')
+ft = File.open('app/views/footwear-2(shoes).jpeg')
 footwearTwo.image = ft
 footwearTwo.save
 
