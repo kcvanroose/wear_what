@@ -42,43 +42,43 @@ jacket.image = f
 jacket.save
 
 shirtOne = Item.new(color: 'Camel', brand: 'Burberry', user_id: 1, category_id: 3)
-so = File.open('app/views/shirt-1.jpeg')
-shirtOne.image = so
+f = File.open('app/views/shirt1.jpeg')
+shirtOne.image = f
 shirtOne.save
 
 shirtTwo = Item.new(color: 'Black', brand: 'Armani', user_id: 1, category_id: 3)
-st = File.open('app/views/shirt-2.jpeg')
-shirtTwo.image = st
+f = File.open('app/views/shirt2.jpeg')
+shirtTwo.image = f
 shirtTwo.save
 
 tshirtOne = Item.new(color: 'Navy Blue', brand: 'Polo Ralph Lauren', user_id: 1, category_id: 2)
-tso = File.open('app/views/t-shirt_1.jpeg')
-tshirtOne.image = tso
+f = File.open('app/views/tshirt1.jpeg')
+tshirtOne.image = f
 tshirtOne.save
 
 tshirtTwo = Item.new(color: 'White', brand: 'Loewe', user_id: 1, category_id: 2)
-tst = File.open('app/views/t-shirt-2.jpeg')
-tshirtTwo.image = tst
+f = File.open('app/views/tshirt2.jpeg')
+tshirtTwo.image = f
 tshirtTwo.save
 
 trousersOne = Item.new(color: 'Blue', brand: 'J Brand', user_id: 1, category_id: 1)
-to = File.open('app/views/trousers-1.jpeg')
-trousersOne.image = to
+f = File.open('app/views/trousers1.jpeg')
+trousersOne.image = f
 trousersOne.save
 
 trousersTwo = Item.new(color: 'Black', brand: 'Paige', user_id: 1, category_id: 1)
-tt = File.open('app/views/trousers-2.jpeg')
-trousersTwo.image = tt
+f = File.open('app/views/trousers2.jpeg')
+trousersTwo.image = f
 trousersTwo.save
 
 footwearOne = Item.new(color: 'Grey', brand: 'Giuseppe Zanotti', user_id: 1, category_id: 4)
-fo = File.open('app/views/footwear-1(trainers).jpeg')
-footwearOne.image = fo
+f = File.open('app/views/footwear1.jpeg')
+footwearOne.image = f
 footwearOne.save
 
 footwearTwo = Item.new(color: 'Black', brand: 'Aldo', user_id: 1, category_id: 4)
-ft = File.open('app/views/footwear-2(shoes).jpeg)')
-footwearTwo.image = ft
+f = File.open('app/views/footwear2.jpeg')
+footwearTwo.image = f
 footwearTwo.save
 
 
