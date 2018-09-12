@@ -16,17 +16,18 @@ class ItemsController < ApplicationController
 
 
   def create
-    @item = Item.new(item_params)
+
+    @category = Category.find(params[:category_id])
+    @user = User.find(params[:user_id])
+    @item = Item.new(color: params[:color], brand: params[:brand], user: @user, category: @category)
     if @item.save
+      @item.image = params[:image]
+      @item.save
       render json: @item
     else
       render json: @item.errors
     end
+
   end
 
-  private
-
-  def item_params
-    params.permit(:image, :color, :brand, :user_id, :category_id)
-  end
 end
