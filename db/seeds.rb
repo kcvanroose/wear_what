@@ -100,7 +100,7 @@ f = File.open('app/views/trainers1.jpeg')
 trainersOne.image = f
 trainersOne.save
 
-trainersTwo = Item.new(color: 'Grey/Light', brand: 'Giuseppe Zanotti', user_id: 1, category_id: 5)
+trainersTwo = Item.new(color: 'Grey', brand: 'Giuseppe Zanotti', user_id: 1, category_id: 5)
 f = File.open('app/views/trainers2.jpeg')
 trainersTwo.image = f
 trainersTwo.save
@@ -117,7 +117,7 @@ shoesOne.save
 
 shoesTwo = Item.new(color: 'Navy Blue', brand: 'Tods', user_id: 1, category_id: 4)
 f = File.open('app/views/shoes2.jpeg')
-shoesOne.image = f
+shoesTwo.image = f
 shoesTwo.save
 
 shoesThree = Item.new(color: 'Black', brand: 'Aldo', user_id: 1, category_id: 4)

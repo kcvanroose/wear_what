@@ -17,7 +17,7 @@ class ItemsController < ApplicationController
 
   def create
 
-    @category = Category.find(params[:category_id])
+    @category = Category.find_by(name: params[:category_id])
     @user = User.find(params[:user_id])
     @item = Item.new(color: params[:color], brand: params[:brand], user: @user, category: @category)
     if @item.save
