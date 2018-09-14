@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :users
   resources :items
+  resources :outfits
   # get 'item/index'
   # get 'item/show'
   # get 'item/create'
